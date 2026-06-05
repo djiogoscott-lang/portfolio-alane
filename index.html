@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de LEMOGUE DOUANLA Alane Rixin - Étudiant en UX/UI Design et Développement Web">
+    <title>Alane Rixin LEMOGUE DOUANLA | Portfolio UX/UI & Dev Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#accueil" class="logo">Alane<span>.</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="burger" aria-label="Menu" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container hero-content">
+            <p class="hero-greeting">Bonjour, je suis</p>
+            <h1>LEMOGUE DOUANLA <span class="accent">Alane Rixin</span></h1>
+            <h2 class="hero-subtitle">Étudiant en UX/UI Design & Développement Web</h2>
+            <p class="hero-text">
+                Je conçois des interfaces simples, accessibles et orientées utilisateur,
+                tout en bâtissant les fondations techniques qui les font vivre.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+            <p class="status">
+                <span class="status-dot"></span>
+                Recherche de stage : <strong>Non (pas pour l'instant)</strong>
+            </p>
+        </div>
+    </section>
+
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2 class="section-title">À propos</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Étudiant passionné par le numérique, je me forme à la croisée de deux
+                        univers complémentaires : le <strong>design d'expérience utilisateur (UX/UI)</strong>
+                        et le <strong>développement web</strong>. Mon objectif est de créer des produits
+                        digitaux esthétiques, performants et centrés sur les vrais besoins.
+                    </p>
+                    <p>
+                        Je m'intéresse particulièrement à la modélisation de données, à
+                        l'architecture des bases de données et à la manière dont une interface
+                        bien pensée peut transformer une donnée brute en valeur pour l'utilisateur.
+                    </p>
+                </div>
+                <div class="skills">
+                    <h3>Compétences</h3>
+                    <ul class="skills-list">
+                        <li>UX / UI Design</li>
+                        <li>Figma &amp; Prototypage</li>
+                        <li>HTML5 / CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Modélisation MCD / MLD</li>
+                        <li>SQL &amp; Bases de données</li>
+                        <li>Responsive Design</li>
+                        <li>Git &amp; Vercel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projets</h2>
+            <p class="section-subtitle">Une sélection de travaux mêlant design d'interface et structuration de données.</p>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-thumb thumb-1">
+                        <span>UX • BDD</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>ExpressDrive — Refonte UX d'une agence de location</h3>
+                        <p>
+                            Étude UX et maquette d'une plateforme de location de véhicules,
+                            adossée à une modélisation MCD/MLD complète (Clients, Véhicules,
+                            Catégories, Locations) pensée pour des requêtes performantes.
+                        </p>
+                        <ul class="project-tags">
+                            <li>Figma</li>
+                            <li>MCD / MLD</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-thumb thumb-2">
+                        <span>UI • Web</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>StudyMate — Tableau de bord étudiant</h3>
+                        <p>
+                            Conception d'un dashboard responsive pour étudiants : suivi des
+                            cours, deadlines et ressources. Architecture de données relationnelle
+                            simple et interface mobile-first.
+                        </p>
+                        <ul class="project-tags">
+                            <li>HTML / CSS</li>
+                            <li>JavaScript</li>
+                            <li>UX Research</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">Une question, un projet, une opportunité ? Discutons-en.</p>
+
+            <div class="contact-grid">
+                <a href="mailto:lemoguealane@gmail.com" class="contact-card">
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">lemoguealane@gmail.com</span>
+                </a>
+
+                <a href="https://wa.me/237670456576" target="_blank" rel="noopener" class="contact-card">
+                    <span class="contact-label">WhatsApp</span>
+                    <span class="contact-value">+237 670 456 576</span>
+                </a>
+
+                <div class="contact-card">
+                    <span class="contact-label">Disponibilité</span>
+                    <span class="contact-value">Stage : non (pas pour l'instant)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 LEMOGUE DOUANLA Alane Rixin — Tous droits réservés.</p>
+            <p class="footer-sub">Conçu et développé avec soin. Déployé sur Vercel.</p>
+        </div>
+    </footer>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            burger.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                burger.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
