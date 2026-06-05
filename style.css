@@ -283,10 +283,11 @@ ul, ol { list-style: none; }
 .hero-title {
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: clamp(2.4rem, 8.5vw, 7rem);
-    line-height: 0.98;
-    letter-spacing: -0.04em;
+    font-size: clamp(1.9rem, 5.8vw, 5rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
     margin-bottom: clamp(40px, 6vw, 60px);
+    max-width: 1000px;
 }
 .hero-title .line {
     display: block;
