@@ -614,6 +614,38 @@
         }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
         document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+        // Smart email handler: open Gmail web compose + copy to clipboard
+        function showToast(message) {
+            const existing = document.querySelector('.toast');
+            if (existing) existing.remove();
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `
+                <span class="toast-icon" aria-hidden="true">✓</span>
+                <span class="toast-text">${message}</span>
+            `;
+            document.body.appendChild(toast);
+            requestAnimationFrame(() => toast.classList.add('show'));
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 400);
+            }, 3200);
+        }
+
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const email = link.href.replace('mailto:', '').split('?')[0];
+                const subject = encodeURIComponent('Contact depuis votre portfolio');
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`;
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(email).catch(() => {});
+                }
+                window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+                showToast(`Gmail ouvert · ${email} copié`);
+            });
+        });
+
         // Custom cursor (desktop only, fine pointer)
         if (window.matchMedia('(pointer: fine)').matches) {
             const cursor = document.getElementById('cursor');
